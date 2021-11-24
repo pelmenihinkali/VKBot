@@ -1,0 +1,38 @@
+﻿<Window x:Name="MainWindow1" x:Class="NekitVKBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:NekitVKBot"
+        mc:Ignorable="d"
+        Title="AnyBot" Height="450" Width="800" Closed="MainWindow1_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="431*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="Menu" Height="30" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Menu.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Menu.Background>
+            <MenuItem Header="Настройки">
+                <MenuItem Header="Подключение к соц. сетям" Click="settingsMenu"/>
+                <MenuItem Header="Настройка компонентов" Click="componentMenu"/>
+            </MenuItem>
+            <MenuItem x:Name="Start" Header="►" Background="#CC57B443" Foreground="White" Height="23" FontFamily="Franklin Gothic Medium Cond" Width="32" Click="Start_Click" BorderBrush="{x:Null}" AllowDrop="True" AutomationProperties.HelpText="Запустить проект" AutomationProperties.ItemStatus="status" FontSize="18" FontWeight="Bold" />
+        </Menu>
+        <TabControl Margin="0,27,0,0" Grid.Row="1">
+            <TabItem Header="Консоль" Height="22" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid Background="#FFE5E5E5">
+                    <WindowsFormsHost Margin="513,-175,35,468">
+                        <wf:WebBrowser x:Name="web" Url="https://jr.samgups.ru/gups/index.php" ScriptErrorsSuppressed="True" />
+                    </WindowsFormsHost>
+                    <RichTextBox x:Name="TBConsole" Margin="10,10,10,10" FontWeight="Normal">
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

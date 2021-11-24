@@ -1,0 +1,22 @@
+﻿<Window x:Class="NekitVKBot.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NekitVKBot"
+        mc:Ignorable="d"
+        Title="Настройки" Height="221" Width="304" ResizeMode="NoResize" Closed="Window_Closed" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Header="Подключение&#xD;&#xA;" Margin="10,10,0,0" HorizontalAlignment="Left" Width="268" Height="128" VerticalAlignment="Top">
+            <Grid Height="79" HorizontalAlignment="Right" Width="229" Margin="0,0,14,0">
+                <Label Content="Токен" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Height="28"/>
+                <TextBox x:Name="tokenBox" HorizontalAlignment="Left" Margin="84,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="19"/>
+                <Label Content="ID группы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="29"/>
+                <TextBox x:Name="idBox" HorizontalAlignment="Left" Margin="84,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="19"/>
+            </Grid>
+        </GroupBox>
+        <Label Content="Обновление запроса" HorizontalAlignment="Left" Margin="18,143,0,0" VerticalAlignment="Top" Height="29"/>
+        <TextBox x:Name="delayBox" HorizontalAlignment="Left" Margin="155,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Height="17"/>
+
+    </Grid>
+</Window>
